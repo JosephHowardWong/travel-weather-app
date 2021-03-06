@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>Travel Weather App</title>
+</head>
+<body class="body">
+
+    <header>
+        <i class="fas fa-compass fa-3x"></i>
+        <h1 class="text-center">Travel Weather App</h1>
+        <i class="fas fa-cloud-sun-rain fa-3x"></i>
+    </header>
+    
+    <div class="input-section">
+        <div class="input-field">
+            <label class="text-center" for="city-entered"><h3>Please enter your destination city</h3></label>
+            <input id="city-entered" class="city-entered" placeholder="destination city" name="city" type="text" required>
+        </div>
+        <div class="input-field">    
+            <label for="date" class="text-center"><h3>enter your arrival date</h3></label>
+            <input type="date" name="date" id="date" class="date" min="0" required>
+        </div>
+        <button class="btn-submit"><h3>Get Forecast</h3></button>
+    </div>
+
+    <article class="ui-data hide">
+            <h2 class="forecast-date"></h2>
+            <div class="info-list">
+                <ul>
+                    <li class="city-country"></li>
+                    <li class="description"></li>
+                    <li class="temperature"></li>
+                    <li class="rh"></li>
+                    <li class="pres"></li>
+                    <li class="precip"></li>
+                </ul>
+            </div>
+            <img class="city-image" src="" alt="a picture of the destination city">
+    </article>
+
+    <article class="ui-data hide">
+            <h2 class="country-info"></h2>
+            <div class="info-list">
+                <ul>
+                    <li class="capital"></li>
+                    <li class="currencies"></li>
+                    <li class="languages"></li>
+                    <li class="population"></li>
+                </ul>
+            </div>
+            <img class="flag-image" src="" alt="a picture of the country flag">
+    </article>
+
+    <h2 class="error hide"></h2>
+
+    <button class="btn-reset"><h3>Reset</h3></button>
+
+    <footer>
+        <div class="footer-title">
+            <h2 class="text-center">Travel Weather App</h2>
+            <p class="text-center">&copy; 2021</p>
+        </div>
+        <ul class="social-list">
+            <li class="social-icon"><a href="https://github.com/JosephHowardWong" target="_blank"><i class="fab fa-github fa-2x"></i></a></li>
+            <li class="social-icon"><a href="https://www.linkedin.com/in/joseph-wong-1742342/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></li>
+            <li class="social-icon"><a href="https://www.facebook.com/joseph.wong.5245/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a></li>
+            <li class="social-icon"><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube fa-2x"></i></a></li>
+        </ul>
+    </footer>
+
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js').then(registration => {
+                    console.log('SW registered: ', registration)
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError)
+                })
+            })
+        }  
+    </script>
+</body>
+</html>
