@@ -5,10 +5,9 @@
   "scripts": {
     "test": "jest",
     "start": "node src/server/server.js",
-    "build": "nodemon ./src/server/server.js",
     "prod": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
-    "go": "webpack --config webpack.prod.js && npm run build"
+    "go": "webpack --config webpack.prod.js && npm run start"
   },
   "keywords": [],
   "author": "",
