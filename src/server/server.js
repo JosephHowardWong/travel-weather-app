@@ -19,7 +19,8 @@ app.get('/', (req,res) => {
 
 const PORT = process.env.PORT || 8080;
 
-const server = app.listen(PORT, console.log(`app listening on port ${PORT}`));
+const server = app.listen(PORT, () => console.log(`app listening on port ${PORT}`));
+// app.listen(PORT, () => console.log(`app listening on port ${PORT}`));
 
 // base url of all api's
 const restCount_baseURL = 'https://restcountries.eu/rest/v2/alpha/'
