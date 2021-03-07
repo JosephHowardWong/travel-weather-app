@@ -1,10 +1,10 @@
 {
   "name": "v2-ta",
   "version": "1.0.0",
-  "main": "./src/server/server.js",
+  "main": "src/server/server.js",
   "scripts": {
     "test": "jest",
-    "start": "node ./src/server/server.js",
+    "start": "node src/server/server.js",
     "build": "nodemon ./src/server/server.js",
     "prod": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
